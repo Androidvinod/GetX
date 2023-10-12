@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:get_x/binding/all_controller_binding.dart';
+import 'package:get_x/binding/nwtwork_bining.dart';
 import 'package:get_x/components/get_x_service.dart';
 import 'package:get_x/pages/home.dart';
 import 'package:get_x/messages/messages.dart';
@@ -13,6 +15,7 @@ import 'package:get_x/messages/messages.dart';
 
 Future<void> main() async{
   await initService();
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -25,7 +28,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // if we have to use binding
-        initialBinding: AllControllerBinding(),
+      //   initialBinding: AllControllerBinding(),
+        initialBinding: NetworkBinding(),
       // if locale is used
       translations: Messages(),
       locale: const Locale('en','US'),

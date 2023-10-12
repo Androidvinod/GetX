@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x/apiCallingWithGetX/productModule/views/product_view.dart';
+import 'package:get_x/components/get_storage_and_email_validation.dart';
+import 'package:get_x/components/get_view_and_get_widget.dart';
+import 'package:get_x/components/network_checker.dart';
 class HomeTwo extends StatelessWidget {
   const HomeTwo({super.key});
 
@@ -22,6 +25,24 @@ class HomeTwo extends StatelessWidget {
                       Get.to(()=>ProductView());
                     },
                     child: const Text("Api calling with HTTP")
+                ),
+                ElevatedButton(
+                    onPressed: (){
+                      Get.to(()=>GetStorageAndEmailValidation());
+                    },
+                    child: const Text("Get Storage and Email Validation")
+                ),
+                ElevatedButton(
+                    onPressed: (){
+                      Get.to(()=>GetViewAndGetWidget());
+                    },
+                    child: const Text("Get View and Get Widget")
+                ),
+                ElevatedButton(
+                    onPressed: (){
+                      Get.to(()=>NetworkChecker());
+                    },
+                    child: const Text("Network Checker")
                 ),
               ],
             ),
