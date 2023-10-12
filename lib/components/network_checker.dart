@@ -7,7 +7,10 @@ import 'package:get_storage/get_storage.dart';
 import 'package:get_x/controller/network_contoller.dart';
 class NetworkChecker extends StatelessWidget {
 
-final NetworkController networkController = Get.find<NetworkController>();
+// final NetworkController networkController = Get.find<NetworkController>();
+
+  final NetworkController networkController;
+  const NetworkChecker({super.key, required this.networkController});
 
   @override
   Widget build(BuildContext context) {
