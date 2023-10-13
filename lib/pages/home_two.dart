@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_x/apiCallingWithGetX/productModule/views/product_view.dart';
 import 'package:get_x/components/get_storage_and_email_validation.dart';
 import 'package:get_x/components/get_view_and_get_widget.dart';
+import 'package:get_x/components/get_x_image_picker.dart';
 import 'package:get_x/components/network_checker.dart';
 import 'package:get_x/controller/network_contoller.dart';
 class HomeTwo extends StatelessWidget {
@@ -45,6 +46,12 @@ class HomeTwo extends StatelessWidget {
                       Get.to(()=>NetworkChecker(networkController:networkController));
                     },
                     child: const Text("Network Checker")
+                ),
+                ElevatedButton(
+                    onPressed: (){
+                      Get.to(()=>GetXImagePicker());
+                    },
+                    child: const Text("GetX Image Picker")
                 ),
               ],
             ),
